@@ -12,14 +12,17 @@
 </header>
 <body>
     <table>
+        <form onsubmit="employeeForm(event)">
         <tr>
-            <td><input placeholder="First Name"></td>
-            <td><input placeholder="Last Name"></td>
-            <td><input placeholder="ID Number"><td>
-            <td><input placeholder="Job Title"></td>
-            <td><input type="number" placeholder="Annual Salary"></td>
+            <td><input id="first-name" placeholder="First Name"></td>
+            <td><input id="last-name" placeholder="Last Name"></td>
+            <td><input id="id-number" placeholder="ID Number"><td>
+            <td><input id="job-title" placeholder="Job Title"></td>
+            <td><input id="annual-salary" type="number" placeholder="Annual Salary"></td>
+            <td><button>Submit</button></td>
         </tr>
     </table>
+</form>
     <table>
         <tr>
             <th>First Name</th>
@@ -28,7 +31,7 @@
             <th>Job Title</th>
             <th>Annual Salary</th>
         </tr>
-        <tbody>
+        <tbody id="added-employee">
         </tbody>
     </table>
     <footer>
