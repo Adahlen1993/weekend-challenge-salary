@@ -7,6 +7,7 @@ function onReady(){
 
 const employees = [];
 
+let monthlyExpenses = 0;
 
 
 // 1.Wire up inputs
@@ -27,7 +28,7 @@ function employeeForm(event) {
     <td>${idNumber.value}</td>
     <td>${jobTitle.value}</td>
     <td>${annualSalary.value}</td>
-    <td><button>Delete</button>
+    <td><button id='remove-row' onclick='removeRow(event)>Delete</button>
     </tr>
     `;
     let employee = {
@@ -35,14 +36,18 @@ function employeeForm(event) {
         lastname: lastName.value,
         idnumber: idNumber.value,
         jobtitle: jobTitle.value,
-        annualsalary: annualSalary.Value
+        annualsalary: annualSalary.value
     }
     employees.push(employee);
-    
-    
+    let monthlySalary = annualSalary.value/12;
+    monthlyExpenses += monthlySalary;
+    document.getElementById('expenses').innerHTML = monthlyExpenses;
+    // 3.Clear form after submit
+    document.getElementById('employee-form').reset();
 }
-console.log(employees);
-// 3.Clear form after submit
+
+function removeRow(event)
+
 // 4.Calculate Monthly costs
 // 5.add conditional formatting for monthly costs
 //  if over 20000

@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheets" href="styles.css">
     <script src="client.js"></script>
-    <title>Document</title>
+    <title>Salary</title>
 </head>
 <header>
     <h1> Employee Monthly Salary</h1>
 </header>
 <body>
     <table>
-        <form onsubmit="employeeForm(event)">
+        <form id="employee-form" onsubmit="employeeForm(event)">
         <tr>
             <td><input id="first-name" placeholder="First Name"></td>
             <td><input id="last-name" placeholder="Last Name"></td>
@@ -36,7 +36,7 @@
     </table>
     <footer>
         <h2>Total Monthly Cost</h2>
-        <h3>$$$</h3>
+        <h3 id="expenses" >$$$</h3>
     </footer>
 </body>
 </html>
