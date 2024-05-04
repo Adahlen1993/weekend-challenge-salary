@@ -8,7 +8,7 @@ function onReady(){
 const employees = [];
 
 let monthlyExpenses = 0;
-
+let monthlySalary = 0;
 
 // 1.Wire up inputs
 // 2.Wire up form for submit
@@ -21,6 +21,7 @@ function employeeForm(event) {
     idNumber = document.getElementById('id-number');
     jobTitle = document.getElementById('job-title');
     annualSalary = document.getElementById('annual-salary');
+    // 6. add employees to table
     document.getElementById('added-employee').innerHTML +=`
     <tr>
     <td>${firstName.value}</td>
@@ -28,7 +29,7 @@ function employeeForm(event) {
     <td>${idNumber.value}</td>
     <td>${jobTitle.value}</td>
     <td>${annualSalary.value}</td>
-    <td><button id='remove-row' onclick='removeRow(event)>Delete</button>
+    <td><button id='remove-row' onclick='removeRow(event)'>Delete</button>
     </tr>
     `;
     let employee = {
@@ -39,17 +40,45 @@ function employeeForm(event) {
         annualsalary: annualSalary.value
     }
     employees.push(employee);
-    let monthlySalary = annualSalary.value/12;
+    // 4.Calculate Monthly costs
+    monthlySalary = annualSalary.value/12
     monthlyExpenses += monthlySalary;
-    document.getElementById('expenses').innerHTML = monthlyExpenses;
+    // 5.add conditional formatting for monthly costs
+    //  if over 20000
+    if(monthlyExpenses === 20000){
+        document.getElementById('expenses').innerHTML = `
+        <h3 id="expenses" style="background-color:yellow;">${monthlyExpenses}</h3>
+        `;}
+    else if(monthlyExpenses > 20000){
+            document.getElementById('expenses').innerHTML = `
+            <h3 id="expenses" style="background-color:red;">${monthlyExpenses}</h3>
+            `
+    } else {document.getElementById('expenses').innerHTML = monthlyExpenses;}
     // 3.Clear form after submit
     document.getElementById('employee-form').reset();
 }
 
-function removeRow(event)
-
-// 4.Calculate Monthly costs
-// 5.add conditional formatting for monthly costs
-//  if over 20000
-// 6. add employees to table
 // 6. create a delete button that clears whole row
+function removeRow(event) {
+    event.target;
+    document.getElementById('remove-row').closest('tr').remove();
+    for (emp of employees) {
+    let loopExpenses = 0;
+    loopExpenses += emp.annualsalary/12;
+        if(loopExpenses < 20000) {
+            document.getElementById('expenses').innerHTML = `
+            <h3 id="expenses" >${loopExpenses}</h3>
+            `;
+        } else if(loopExpenses === 20000){
+            document.getElementById('expenses').innerHTML =`
+            <h3 id="expenses" style="background-color:yellow;">${loopExpenses}</h3>
+            `
+        }
+        else {
+            document.getElementById('expenses').innerHTML =`
+            <h3 id="expenses" style="background-color:red;">${loopExpenses}</h3>
+            `
+        }
+    }
+}
+
