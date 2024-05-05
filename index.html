@@ -2,28 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheets" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="client.js"></script>
-    <title>Salary</title>
 </head>
+<title>Salary</title>
 <header>
     <h1> Employee Monthly Salary</h1>
 </header>
 <body>
+    <h2 id="add-employee">Add Employee</h2>
     <table class="table">
         <form id="employee-form" onsubmit="employeeForm(event)">
         <tr>
-            <td><input id="first-name" placeholder="First Name"></td>
-            <td><input id="last-name" placeholder="Last Name"></td>
-            <td><input id="id-number" placeholder="ID Number"><td>
-            <td><input id="job-title" placeholder="Job Title"></td>
-            <td><input id="annual-salary" type="number" placeholder="Annual Salary"></td>
-            <td><button>Submit</button></td>
+            <td class="input-box"><input id="first-name" placeholder="First Name" required></td>
+            <td class="input-box"><input id="last-name" placeholder="Last Name" required></td>
+            <td class="input-box"><input id="id-number" placeholder="ID Number" required><td>
+            <td class="input-box"><input id="job-title" placeholder="Job Title" required></td>
+            <td class="input-box"><input id="annual-salary" type="number" placeholder="Annual Salary" required></td>
+            <td class="input-box"><button id="submit-button">Submit</button></td>
         </tr>
     </table>
 </form>
-    <table class="table">
+    <table class="table" id="employee-table">
         <tr>
             <th>First Name</th>
             <th>Last Name</th>
@@ -35,9 +35,9 @@
         <tbody id="added-employee">
         </tbody>
     </table>
-    <footer>
-        <h2>Total Monthly Cost</h2>
-        <h3 id="expenses" >$0</h3>
-    </footer>
 </body>
+<footer>
+    <h2 id="total-monthly-cost">Total Monthly Cost</h2>
+    <h2 id="expenses" >$0.00</h3>
+</footer>
 </html>

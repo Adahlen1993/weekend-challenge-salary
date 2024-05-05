@@ -36,12 +36,12 @@ function employeeForm(event) {
     // `;
     document.getElementById('added-employee').innerHTML +=`
     <tr>
-    <td>${firstName.value}</td>
-    <td>${lastName.value}</td>
-    <td id='empid'>${idNumber.value}</td>
-    <td>${jobTitle.value}</td>
-    <td id="salary">${annualSalary.value}</td>
-    <td><button id="remove-button" onclick='removeRow(event)'>Delete</button></td>
+    <td class='emp'>${firstName.value}</td>
+    <td class='emp'>${lastName.value}</td>
+    <td class='emp' id='empid'>${idNumber.value}</td>
+    <td class='emp'>${jobTitle.value}</td>
+    <td class='emp' id="salary">${annualSalary.value}</td>
+    <td class='emp'><button id="remove-button" onclick='removeRow(event)'>Delete</button></td>
     </tr>
     `;
     let employee = {
