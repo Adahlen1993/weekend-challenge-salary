@@ -1,78 +1,81 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: antiquewhite;
+  margin: 0;
+  padding: 0;
+  background-color: antiquewhite;
 }
 
 table {
-    background-color: whitesmoke;
-   margin-left: auto;
-   margin-right: auto;
-   margin-bottom: 10px;
-   width: 80%
+  background-color: whitesmoke;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  width: 80%;
 }
 tr:nth-child(even) {
-    background-color: lightblue;
+  background-color: lightblue;
 }
-table, tbody, th, tr, td {
-    border: 1px solid;
+table,
+tbody,
+th,
+tr,
+td {
+  border: 1px solid;
 }
-input{
-    font-size: large;
-    padding:8px;
-    text-align: center;
+input {
+  font-size: large;
+  padding: 8px;
+  text-align: center;
 }
 .input-box {
-    text-align: center;
+  text-align: center;
 }
-#add-employee{
-    padding-left: 200px;
-    margin-bottom: 10px;
-    margin-left: 40px;
+#add-employee {
+  padding-left: 200px;
+  margin-bottom: 10px;
+  margin-left: 40px;
 }
 #employee-table {
-width: 80%;
-margin-top: 30px;
+  width: 80%;
+  margin-top: 30px;
 }
-th{
-    font-size: large;
+th {
+  font-size: large;
 }
 #expenses {
-    padding: 5px;
-    margin-top: 5px;
-    border: 1px solid;
-    text-align: center;
-    background-color: whitesmoke;
+  padding: 5px;
+  margin-top: 5px;
+  border: 1px solid;
+  text-align: center;
+  background-color: whitesmoke;
 }
 footer {
-    
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 h1 {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin:0%;
-    width:100%;
-    text-align: center;
-    text-decoration: underline;
-    background-color: whitesmoke;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 0%;
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
+  background-color: whitesmoke;
 }
 #total-monthly-cost {
-    background-color: whitesmoke;
-    padding: 5px;
-    border: 1px solid;
-    margin-bottom: 10px;
+  background-color: whitesmoke;
+  padding: 5px;
+  border: 1px solid;
+  margin-bottom: 10px;
 }
 #submit-button {
-    font-size: medium;
-    padding: 3px;
-    margin:3px;
+  font-size: medium;
+  padding: 3px;
+  margin: 3px;
 }
 .emp {
-    padding-left: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: large;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: large;
 }
