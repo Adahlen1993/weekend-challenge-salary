@@ -1,9 +1,10 @@
 # Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+Weekend Challenge Salary Calculator
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+I built a table that updates as a new employee(inputs) are added to it. This table calculates a total monthly expense that when reaching a certain number(in this case greater than 20000) turns red. It also has the option to delete added (employee) from the table and update the total expenses at the bottom.
+
+
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).

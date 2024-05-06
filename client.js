@@ -2,7 +2,7 @@ function onReady() {
   alert(`Attention Employees! Please Fill Out The Form 
     Below!`);
 }
-// onReady();
+onReady();
 
 const employees = [];
 const employeesSalary = [];
@@ -23,16 +23,7 @@ function employeeForm(event) {
   jobTitle = document.getElementById("job-title");
   annualSalary = document.getElementById("annual-salary");
   // 6. add employees to table
-  // document.getElementById('added-employee').innerHTML +=`
-  // <tr>
-  // <td>${firstName.value}</td>
-  // <td>${lastName.value}</td>
-  // <td>${idNumber.value}</td>
-  // <td>${jobTitle.value}</td>
-  // <td>${annualSalary.value}</td>
-  // <td><button id='remove-row' onclick='removeRow(event)'>Delete</button>
-  // </tr>
-  // `;
+
   document.getElementById("added-employee").innerHTML += `
     <tr>
     <td class='emp'>${firstName.value}</td>
